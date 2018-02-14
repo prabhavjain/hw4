@@ -1,0 +1,45 @@
+function setup() {
+	createCanvas(450, 120);
+	background(25, 55, 255);
+
+	var freqA = 174;
+	var freqS = 196;
+	var freqD = 220;
+	var freqF = 246;
+
+	var oscA, oscS, oscD, oscF;
+
+	var playing = false;
+
+	oscA = new p5.Oscillator();
+	oscA.setType('sine');
+	oscA.freq(freqA);
+	oscA.amp(0);
+	oscA.start();
+
+	oscS = new p5.Oscillator();
+	oscS.setType('sawtooth');
+	oscS.freq(freqS);
+	oscS.amp(0);
+	oscS.start();
+
+	oscD = new p5.Oscillator();
+	oscD.setType('triangle');
+	oscD.freq(freqD);
+	oscD.amp(0);
+	oscD.start();
+
+	oscF = new p5.Oscillator();
+	oscF.setType('square');
+	oscF.freq(freqF);
+	oscF.amp(0);
+	oscF.start();
+
+}
+
+function draw() {
+	a = rect(10, 10, 100, 100);
+	s = rect(120, 10, 100, 100);
+	d = rect(230, 10, 100, 100);
+	f = rect(340, 10, 100, 100);
+}
